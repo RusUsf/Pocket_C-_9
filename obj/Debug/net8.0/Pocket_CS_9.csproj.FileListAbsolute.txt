@@ -3,7 +3,6 @@ C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\bin\Debug\net8.0\Pocket_CS_9.runtimeconfig.json
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\bin\Debug\net8.0\Pocket_CS_9.dll
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\bin\Debug\net8.0\Pocket_CS_9.pdb
-C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.csproj.AssemblyReference.cache
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.AssemblyInfoInputs.cache
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.AssemblyInfo.cs
@@ -14,3 +13,4 @@ C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.pdb
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.genruntimeconfig.cache
 C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\ref\Pocket_CS_9.dll
+C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9\obj\Debug\net8.0\Pocket_CS_9.csproj.AssemblyReference.cache

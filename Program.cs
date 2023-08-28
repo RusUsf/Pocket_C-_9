@@ -92,7 +92,7 @@ Console.WriteLine(pointClassTwo.X); // 9
 // Nullable Value Type
 
 int? i = null;
-Console.WriteLine(i==null);             // True
+Console.WriteLine(i == null);             // True
 
 //Struct
 Nullable<int> iI = new Nullable<int>();
@@ -104,8 +104,8 @@ Foo(myString);
 void Foo(string? s)
 {
     // Safe guard for NullReferenceException
-    if(s != null) Console.WriteLine(s.Length); 
-    if(s !=null) Console.WriteLine(s);
+    if (s != null) Console.WriteLine(s.Length);
+    if (s != null) Console.WriteLine(s);
 }
 
 // Numeric suffixes F & M                               p.21
@@ -116,6 +116,60 @@ decimal d = -1.23M; // Won't compile without suffix
 int myX = 12345;        // int is a 32-bit integral type
 long myY = myX;         // Implicit conversion to 64-bit int
 short myZ = (short)myX; // Explicit conversion to 16-bit int
+
+Console.WriteLine($"{f.GetType()}, {f}, {d.GetType()}, {d}, {myX.GetType()}, {myX}, {myY.GetType()}, {myY}, {myZ.GetType()}, {myZ}");
+
+// Increment and Decrement Operators                    p.22
+int myInt = 0;
+Console.WriteLine(myInt++);  // Outputs 0; myInt is now 1
+Console.WriteLine(++myInt);  // Outpust 2; myInt is now 2
+Console.WriteLine(--myInt);  // Outputs 1; myInt is now 1
+
+//var myVar = myX / 0;         // Run-time error (a DivideByZeroException)
+
+var myVar1 = 0;
+var myVar2 = myVar1 / 5;
+Console.WriteLine(myVar2);
+
+// Overflow
+int a = int.MinValue; a--;
+Console.WriteLine(a == int.MaxValue); // True
+
+// Cehcked operator
+int aA = 1000000, bB = 10000000;
+
+// Checks just the expression
+//int c = checked(aA * bB);              // OverflowException
+
+// Checks all expressions in block           
+//checked {var c = a * bB; }             // OverflowException
+
+// 8- and 16-Bit Integral Types                         p.24
+short myX2 = 1, myY2 = 1;
+//short myZ2 = myX2 + myY2;              // Compile-time error
+
+short myZ2 =(short)(myX2+myX2);          // Explicit conversion to short
+Console.WriteLine($"{myZ2.GetType()}, {myZ2}");
+
+var myZ3 = myX2 + myY2;                  // Imlicit conversion to Int
+Console.WriteLine($"{ myZ3.GetType()}, {myZ3}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
