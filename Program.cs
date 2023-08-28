@@ -148,11 +148,77 @@ int aA = 1000000, bB = 10000000;
 short myX2 = 1, myY2 = 1;
 //short myZ2 = myX2 + myY2;              // Compile-time error
 
-short myZ2 =(short)(myX2+myX2);          // Explicit conversion to short
+short myZ2 = (short)(myX2 + myX2);          // Explicit conversion to short
 Console.WriteLine($"{myZ2.GetType()}, {myZ2}");
 
 var myZ3 = myX2 + myY2;                  // Imlicit conversion to Int
-Console.WriteLine($"{ myZ3.GetType()}, {myZ3}");
+Console.WriteLine($"{myZ3.GetType()}, {myZ3}");
+
+// Equality and Comparison Operators                    p.27
+int myX3 = 1, myY3 = 2, myzZ = 1;
+Console.WriteLine(myX3 == myY3);        // False
+Console.WriteLine(myX3 == myzZ);        // True
+
+// Conditional Operators                                p.27
+bool myWind = false;
+bool myRain = true;
+bool mySun = false;
+
+Console.WriteLine($"Use Umbrella today? {UseUmbrella(myRain, mySun, myWind)}");                           // True
+
+static bool UseUmbrella(bool rainy, bool sunny, bool windy)
+{
+    return !windy && (rainy || sunny);
+}
+
+// Ternary conditional operator q ? a : b
+static int Max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+Console.WriteLine(Max(3, 7));     // 7
+
+// String and Characters
+char c = 'A';
+Console.WriteLine(c); // A
+
+// String Types
+string myStringA = "Do not expect immediate results.";
+Console.WriteLine($"{myStringA.GetType()}, {myStringA}");
+
+string myStringB = "Celebrate small accomplishments!";
+Console.WriteLine(myStringA == myStringB);  //False
+
+// Escape Character \
+string myFilePathA = "\\C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\r\n";
+
+// Verbatim string literals - @                                     p.30
+string myFilePathB = @"C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9";
+
+Console.WriteLine(myFilePathA == myFilePathB);  //False
+
+List<string> names = new List<string>();
+names.AddRange(new[] { "Park", "Tommy", "James" });
+var v = names.OrderBy(n => n.Length)
+    .SingleOrDefault();
+Console.WriteLine(v);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
