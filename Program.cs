@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
 using MyClasses;
 
 Console.WriteLine(FeetToInches(30));
@@ -193,23 +194,68 @@ Console.WriteLine(myStringA == myStringB);  //False
 // Escape Character \
 string myFilePathA = "\\C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\r\n";
 
-// Verbatim string literals - @                                     p.30
+// Verbatim string literals - @                 p.30
 string myFilePathB = @"C:\Users\rus_d\OneDrive\DesktopBackup\Hobbies\Learn to Code forever\Coding Books\C#\Pocket_CS_9";
 
 Console.WriteLine(myFilePathA == myFilePathB);  //False
 
-List<string> names = new List<string>();
-names.AddRange(new[] { "Park", "Tommy", "James" });
-var v = names.OrderBy(n => n.Length)
-    .SingleOrDefault();
-Console.WriteLine(v);
+// String interpolation
+int myTwo = 2;
+string myStringTwo = $@"this spans {myTwo} lines";
+Console.WriteLine(myStringTwo);
+
+// String Comparisons
+Console.WriteLine("Ruslan".CompareTo("Anthony")); // 1
+Console.WriteLine("Ruslan".CompareTo("Ruslan"));  // 0
+Console.WriteLine("Ruslan".CompareTo("Zoe"));    // -1
+
+// Searching within strings                     p.32
+
+Console.WriteLine("Ruslan"[2]);                 // s
+Console.WriteLine("Ruslan".Contains("Rusl"));   // True
+Console.WriteLine("Ruslan".StartsWith("Rus"));  // True
+Console.WriteLine("Ruslan".EndsWith("lan"));    // True
+
+// Manipulating strings
+string myQuote = "Adopt growth mindset - belief in the ability to learn and transform!";
+Console.WriteLine(myQuote.Substring(7));
+Console.WriteLine(myQuote.Insert(0, "Learning Tip: "));
+Console.WriteLine(myQuote.Remove(myQuote.Length - 1));
+Console.WriteLine(myQuote.ToUpper());
 
 
+// Arrays                                       p.32
+char[] vowels = new char[5] { 'a', 'e', 'i', 'o', 'u' };
+Console.WriteLine(vowels[1]);     // e
 
+// Method I to print values of the Array
+Console.WriteLine(string.Join(", ",vowels));
 
+// Method II to print values of the Array
+int counter = 0;
+foreach (var item in vowels)
+{
+    counter++;
+    Console.Write(item);
+    if (counter != vowels.Length)
+    {
+        Console.Write(", ");
+    }
+}
 
+Console.WriteLine("\npress [enter] to continue...");
+Console.Read();
 
+// Method III 
+foreach (char vowel in vowels) Console.Write(vowel+", ");
 
+//Console.WriteLine(vowels[10]);//IndexOutOfRangeException
+
+Console.WriteLine("\npress [enter] to continue...");
+Console.Read();
+
+string[] cities = { "Tampa", "Sarasota", "St.Petersburg" };
+Console.WriteLine(string.Join(" ,",cities));
 
 
 
