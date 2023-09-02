@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pocket_CS_9")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9096f3448b168b9b65bca174abcc1a88bd65738b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23c1e8012ac58d926aebb11a1539cd5f6680760c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pocket_CS_9")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pocket_CS_9")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

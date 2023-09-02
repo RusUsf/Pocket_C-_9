@@ -229,7 +229,7 @@ char[] vowels = new char[5] { 'a', 'e', 'i', 'o', 'u' };
 Console.WriteLine(vowels[1]);     // e
 
 // Method I to print values of the Array
-Console.WriteLine(string.Join(", ",vowels));
+Console.WriteLine(string.Join(", ", vowels));
 
 // Method II to print values of the Array
 int counter = 0;
@@ -247,7 +247,7 @@ Console.WriteLine("\npress [enter] to continue...");
 Console.Read();
 
 // Method III 
-foreach (char vowel in vowels) Console.Write(vowel+", ");
+foreach (char vowel in vowels) Console.Write(vowel + ", ");
 
 //Console.WriteLine(vowels[10]);//IndexOutOfRangeException
 
@@ -255,7 +255,98 @@ Console.WriteLine("\npress [enter] to continue...");
 Console.Read();
 
 string[] cities = { "Tampa", "Sarasota", "St.Petersburg" };
-Console.WriteLine(string.Join(" ,",cities));
+Console.WriteLine(string.Join(" ,", cities));
+
+// Simplified Array Initialization Expressions
+void Fooo(char[] data) { Console.WriteLine(data); };           // Method Fooo
+Fooo(new char[] { 'a', 'b', 'c' });                           // Longhand
+Fooo(new[] { 'a', 'b', 'c' });                                // Shortcut
+
+// Variables and Parameters                                   p.38
+
+// Stack
+static int Factorial(int x)
+{
+    if (x == 0) return 1;
+    return x * Factorial(x - 1);
+}
+
+var results = Factorial(3);
+Console.WriteLine(results);
+
+// Static vs not static Method
+
+// Accessing Static method Add()
+var myResultsAdd = Calculator.Add(2, 3);
+Console.WriteLine(myResultsAdd);
+
+// Accessing not Static method Multiply()
+Calculator myCalculator = new Calculator();
+var myResultsMultiply = myCalculator.Multiply(5, 5);
+Console.WriteLine(myResultsMultiply);
+
+// Accessing Static property
+var mySchoolName = School.Name;
+Console.WriteLine(mySchoolName);
+
+// Accessing non-Static property
+School mySchoolPrincipal = new School();
+var mySchoolPrincipalName = mySchoolPrincipal.Principal = "Ruslan Dubas";
+Console.WriteLine(mySchoolPrincipalName);
+
+// Constructors Examples
+Car myCar = new Car("Ferrari");
+Console.WriteLine(myCar.Model);
+myCar.Speed = 100;
+Console.WriteLine(myCar.Speed);
+
+// Default Values                                   p.40
+bool b = default;
+Console.WriteLine(b);
+int @int = default;
+Console.WriteLine(@int);
+string @string = default;
+Console.WriteLine(@string);
+bool @bool = @string == null;
+Console.WriteLine(@bool);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,3 +27,33 @@ public class Panda
 
 public struct PointStruct { public int X, Y; }
 public class PointClass { public int X, Y; }
+
+public class Calculator
+{
+    public static int Add(int x, int y)
+    {
+        return x + y;
+    }
+
+    public int Multiply(int x, int y)
+    {
+        return x * y;
+    }
+}
+
+public class School
+{
+    public static string? Name = "Swain High School";
+    public string? Principal;
+}
+
+public class Car
+{
+    public string? Model { get; set; }
+    public int Speed { get; set; }
+    public Car(string model)
+    {
+        Model = model;
+        Speed = 0;
+    }
+}

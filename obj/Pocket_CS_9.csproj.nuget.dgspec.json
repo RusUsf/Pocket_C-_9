@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\\Pocket_CS_9.csproj": {}
+    "C:\\Users\\rus_d\\OneDrive\\Desktop\\Coding\\Dotnet\\CSharp\\Pocket_CS_9\\Pocket_CS_9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\\Pocket_CS_9.csproj": {
+    "C:\\Users\\rus_d\\OneDrive\\Desktop\\Coding\\Dotnet\\CSharp\\Pocket_CS_9\\Pocket_CS_9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\\Pocket_CS_9.csproj",
+        "projectUniqueName": "C:\\Users\\rus_d\\OneDrive\\Desktop\\Coding\\Dotnet\\CSharp\\Pocket_CS_9\\Pocket_CS_9.csproj",
         "projectName": "Pocket_CS_9",
-        "projectPath": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\\Pocket_CS_9.csproj",
+        "projectPath": "C:\\Users\\rus_d\\OneDrive\\Desktop\\Coding\\Dotnet\\CSharp\\Pocket_CS_9\\Pocket_CS_9.csproj",
         "packagesPath": "C:\\Users\\rus_d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rus_d\\OneDrive\\DesktopBackup\\Hobbies\\Learn to Code forever\\Coding Books\\C#\\Pocket_CS_9\\obj\\",
+        "outputPath": "C:\\Users\\rus_d\\OneDrive\\Desktop\\Coding\\Dotnet\\CSharp\\Pocket_CS_9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rus_d\\AppData\\Roaming\\NuGet\\NuGet.Config",
