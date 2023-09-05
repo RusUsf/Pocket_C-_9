@@ -312,6 +312,7 @@
 
 // Passing arguments by value
 
+using MyClasses;
 using System.Text;
 
 int myInt2 = 8;
@@ -353,13 +354,75 @@ Console.WriteLine(x);
 //Console.WriteLine(x);
 
 // The params modifier
-int Sum (params int[] ints)
+int Sum(params int[] ints)
 {
     int sum = 0;
     for (int i = 0; i < ints.Length; i++) sum += ints[i];
     return sum;
 }
-Console.WriteLine(Sum(1,2,3,4));  // 10
+
+Console.WriteLine(Sum(1, 2, 3, 4));  // 10
+Console.WriteLine(Sum(new int[] { 1, 2, 3, 4 })); // 10
+
+// Optional Parameters
+void MonkeyThree(int x = 23) { Console.WriteLine(x); }
+MonkeyThree();
+
+MonkeyFour(1);
+void MonkeyFour(int x = 0, int y = 0)
+{
+    Console.WriteLine(x + ", " + y);
+}
+
+// Named arguments
+MonkeyFour(x: 1, y: 2);
+MonkeyFour(y: 2, x: 1);
+
+// Optioanl & Named arguments
+Bar(d: 3);
+void Bar(int a = 0, int b = 0, int c = 0, int d = 0)
+{
+    Console.Write(a + ", " + b + ", " + c + ", " + d);
+}
+
+// var - Implicitly Typed Local Variables
+var name = "Ruslan Dubas";
+var myString = new System.Text.StringBuilder();
+var myFloat = (float)Math.PI;
+
+// Target-Typed new Expressions
+StringBuilder sb1 = new();
+StringBuilder sb2 = new("Test");
+
+// same as StringBuilder sb1 = new StringBuilder();
+// same as StringBuilder sb2 = new StringBuilder();
+
+MyMethodFoo(new("\ntest"));
+void MyMethodFoo(System.Text.StringBuilder sb)
+{
+    Console.WriteLine(sb);
+}
+
+// Expressins and Operators
+
+// Null-Coalescing Operator
+string s1 = null;
+string s2 = s1 ?? "nothing"; // s2 evaluates to "nothing"
+Console.WriteLine(s2);
+
+// myVariable ??= someDefault;
+// if (myVariable == null) myVariable = someDefault;
+
+// Null-Conditional Operator
+System.Text.StringBuilder sb3 = null;
+string s3 = sb3?.ToString(); // No error, s is null
+// same as
+string s4 = (sb3 == null ? null : sb3.ToString());
+
+
+
+
+
 
 
 

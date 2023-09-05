@@ -57,3 +57,13 @@ public class Car
         Speed = 0;
     }
 }
+
+public class MyMonkeyFoo
+{
+    System.Text.StringBuilder sb;
+    public MyMonkeyFoo(string initialValue)
+    {
+        sb = new(initialValue);
+    }
+}
+
