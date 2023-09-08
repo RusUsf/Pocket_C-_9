@@ -65,5 +65,9 @@ public class MyMonkeyFoo
     {
         sb = new(initialValue);
     }
+    public void PrintValue()
+    {
+        Console.WriteLine(sb);
+    }
 }
 

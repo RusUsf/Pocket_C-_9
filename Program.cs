@@ -413,12 +413,40 @@ Console.WriteLine(s2);
 // myVariable ??= someDefault;
 // if (myVariable == null) myVariable = someDefault;
 
-// Null-Conditional Operator
+// Null-Conditional Operator or "Elvis" operator
 System.Text.StringBuilder sb3 = null;
-string s3 = sb3?.ToString(); // No error, s is null
+string s3 = sb3?.ToString(); // No error, s3 is null
 // same as
 string s4 = (sb3 == null ? null : sb3.ToString());
+Console.WriteLine(s4 = s4 ?? "nothing again");
 
+System.Text.StringBuilder sb5 = null;
+string s5 = sb5?.ToString().ToUpper();  // No error
+Console.WriteLine(s5 = s5 ?? "Nothing again and again!");
+
+//x?.y?.z
+
+// same as 
+//x == null ? null : (x.y == null ? null : x.y.z)
+
+System.Text.StringBuilder sb6 = new StringBuilder();
+var sb7 = sb6?.Append("Do not expect immediate results!");
+Console.WriteLine(sb7);
+
+StringBuilder sb8 = null;
+string result = sb8?.ToString() ?? "Default Value";
+Console.WriteLine(result);
+
+int? length = sb7?.ToString().Length;
+Console.WriteLine(length);
+
+MyMonkeyFoo monkeyFive = new MyMonkeyFoo("Retrieve from memory!");
+
+monkeyFive?.PrintValue();
+
+MyMonkeyFoo? monkeySix = null;
+
+monkeySix?.PrintValue();
 
 
 
