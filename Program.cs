@@ -1,4 +1,5 @@
-﻿//using System;
+﻿using System.Collections.Generic;
+//using System;
 //using System.Diagnostics.Metrics;
 //using MyClasses;
 
@@ -447,6 +448,193 @@ monkeyFive?.PrintValue();
 MyMonkeyFoo? monkeySix = null;
 
 monkeySix?.PrintValue();
+
+// Statements
+
+// Declaration Statements
+bool rich = true, famous = false;
+const double c = 2.99792458E08;
+
+// Expression Statements
+string stringOne = "Coding pro-tip: Read, Do, Read, Do, Read, Do!";
+
+// Selection Statements
+if (5 < 2 * 3)
+    Console.WriteLine(stringOne);
+
+// Code block
+var myNumber = 5 > 6 ? 2 * 3 : 3;
+if (myNumber < 3)
+{
+    Console.WriteLine(stringOne);
+    Console.WriteLine(monkeyFive);
+}
+
+// The else clause
+if (rich == false)
+    Console.WriteLine("Embrace challenges!");
+else
+    if (famous == false)
+    Console.WriteLine("Celebrate small accomplishments!");
+
+// Changing the flow of execution
+if (true)
+    if (false)
+        Console.WriteLine(rich);
+    else
+        Console.WriteLine(famous);
+
+// Same as
+if (true)
+{
+    if (false)
+        Console.WriteLine(rich);
+    else
+        Console.WriteLine(famous);
+}
+
+// Moving the braces
+if (true)
+{
+    if (false)
+        Console.WriteLine();
+}
+else
+    Console.WriteLine(famous);  // does not execute
+
+// Else If
+var age = 37;
+
+if (age >= 37)
+    Console.WriteLine("You can be president");
+else if (age >= 21)
+    Console.WriteLine("You can drink!");
+else if (age >= 18)
+    Console.WriteLine("You can vote");
+else
+    Console.WriteLine("You can wait!");
+
+// The switch statement
+static void ShowCard(int cardNumber)
+{
+    switch (cardNumber)
+    {
+        case 13:
+            Console.WriteLine("King");
+            break;
+        case 12:
+            Console.WriteLine("Queen");
+            break;
+        case 11:
+            Console.WriteLine("Jack");
+            break;
+        default:  // Any other cardNumber
+            Console.WriteLine(cardNumber);
+            break;
+    }
+}
+
+var cardNumber = 12;
+ShowCard(cardNumber);
+
+// One Value
+static void WhichCard(int cardNumber)
+{
+
+    switch (cardNumber)
+    {
+        case 13:
+        case 12:
+        case 11:
+            Console.WriteLine("Face card");
+            break;
+        default:
+            Console.WriteLine("Plain card");
+            break;
+
+    }
+}
+
+WhichCard(cardNumber);
+
+// Switching on types
+static void TellMeTheType(object x)
+{
+    switch (x)
+    {
+        case int i:
+            Console.WriteLine("It's an int!");
+            break;
+        case string s:
+            Console.WriteLine(s.Length); // We can use s
+            break;
+        case bool b when b == true:      // Fires when b is true
+            Console.WriteLine("True");
+            break;
+        case null:              // You can also switch on null
+            Console.WriteLine("null");
+            break;
+    }
+}
+
+var myVar = true;
+var myVarTwo = 5;
+int? myVarThree = null;
+var myVarFour = "Reflect on your learnings!";
+
+TellMeTheType(myVar);
+TellMeTheType(myVarTwo);
+TellMeTheType(myVarThree);
+TellMeTheType(myVarFour);
+
+List<T> myValues = new List<T>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
