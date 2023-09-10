@@ -587,8 +587,22 @@ TellMeTheType(myVarTwo);
 TellMeTheType(myVarThree);
 TellMeTheType(myVarFour);
 
-List<T> myValues = new List<T>();
+List<object> myValues = new List<object>();
+myValues.Add(myVar);
+myValues.Add(myVarTwo);
+myValues.Add(myVarThree);
+myValues.Add(myVarFour);
 
+foreach (var item in myValues)
+{
+    TellMeTheType(item);
+}
+
+// Adding values to the list
+List<object> myVars = new List<object> { myVar, myVarTwo, myVarThree, myVarFour };
+
+foreach (var item in myVars)
+    TellMeTheType(item);
 
 
 
