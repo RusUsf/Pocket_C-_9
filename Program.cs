@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿//using System.Collections.Generic;
 //using System;
 //using System.Diagnostics.Metrics;
 //using MyClasses;
@@ -311,312 +311,359 @@
 //bool @bool = @string == null;
 //Console.WriteLine(@bool);
 
-// Passing arguments by value
+//// Passing arguments by value
 
-using MyClasses;
-using System.Text;
+//using MyClasses;
+//using System.Text;
 
-int myInt2 = 8;
-Monkey(myInt2);           // Make a copy of MyInt2
-Console.WriteLine(myInt2);// myInt2 still be 8
+//int myInt2 = 8;
+//Monkey(myInt2);           // Make a copy of MyInt2
+//Console.WriteLine(myInt2);// myInt2 still be 8
 
-static void Monkey(int p)
-{
-    p = p + 1;
-    Console.WriteLine(p);
-}
+//static void Monkey(int p)
+//{
+//    p = p + 1;
+//    Console.WriteLine(p);
+//}
 
-StringBuilder sb = new StringBuilder();
-MonkeyOne(sb);
-Console.WriteLine(sb.ToString());
+//StringBuilder sb = new StringBuilder();
+//MonkeyOne(sb);
+//Console.WriteLine(sb.ToString());
 
-static void MonkeyOne(StringBuilder monkeySB)
-{
-    monkeySB.Append("test");
-    monkeySB = null;
-}
+//static void MonkeyOne(StringBuilder monkeySB)
+//{
+//    monkeySB.Append("test");
+//    monkeySB = null;
+//}
 
-// The ref modifier
-int myXTwo = 8;
-MonkeyTwo(ref myXTwo);
-Console.WriteLine(myXTwo);
+//// The ref modifier p.42
+//int myXTwo = 8;
+//MonkeyTwo(ref myXTwo);
+//Console.WriteLine(myXTwo);
 
-static void MonkeyTwo(ref int p)
-{
-    p = p + 1;
-    Console.WriteLine(p);
-}
+//static void MonkeyTwo(ref int p)
+//{
+//    p = p + 1;
+//    Console.WriteLine(p);
+//}
 
-// The out modifier
-int.TryParse("123", out int x);
-Console.WriteLine(x);
-
-//SomeBigMethod(out _, out _, out int x, out _, out _);
+//// The out modifier
+//int.TryParse("123", out int x);
 //Console.WriteLine(x);
 
-// The params modifier
-int Sum(params int[] ints)
-{
-    int sum = 0;
-    for (int i = 0; i < ints.Length; i++) sum += ints[i];
-    return sum;
-}
+////SomeBigMethod(out _, out _, out int x, out _, out _);
+////Console.WriteLine(x);
 
-Console.WriteLine(Sum(1, 2, 3, 4));  // 10
-Console.WriteLine(Sum(new int[] { 1, 2, 3, 4 })); // 10
+//// The params modifier
+//int Sum(params int[] ints)
+//{
+//    int sum = 0;
+//    for (int i = 0; i < ints.Length; i++) sum += ints[i];
+//    return sum;
+//}
 
-// Optional Parameters
-void MonkeyThree(int x = 23) { Console.WriteLine(x); }
-MonkeyThree();
+//Console.WriteLine(Sum(1, 2, 3, 4));  // 10
+//Console.WriteLine(Sum(new int[] { 1, 2, 3, 4 })); // 10
 
-MonkeyFour(1);
-void MonkeyFour(int x = 0, int y = 0)
-{
-    Console.WriteLine(x + ", " + y);
-}
+//// Optional Parameters
+//void MonkeyThree(int x = 23) { Console.WriteLine(x); }
+//MonkeyThree();
 
-// Named arguments
-MonkeyFour(x: 1, y: 2);
-MonkeyFour(y: 2, x: 1);
+//MonkeyFour(1);
+//void MonkeyFour(int x = 0, int y = 0)
+//{
+//    Console.WriteLine(x + ", " + y);
+//}
 
-// Optioanl & Named arguments
-Bar(d: 3);
-void Bar(int a = 0, int b = 0, int c = 0, int d = 0)
-{
-    Console.Write(a + ", " + b + ", " + c + ", " + d);
-}
+//// Named arguments p.45
+//MonkeyFour(x: 1, y: 2);
+//MonkeyFour(y: 2, x: 1);
 
-// var - Implicitly Typed Local Variables
-var name = "Ruslan Dubas";
-var myString = new System.Text.StringBuilder();
-var myFloat = (float)Math.PI;
+//// Optioanl & Named arguments
+//Bar(d: 3);
+//void Bar(int a = 0, int b = 0, int c = 0, int d = 0)
+//{
+//    Console.Write(a + ", " + b + ", " + c + ", " + d);
+//}
 
-// Target-Typed new Expressions
-StringBuilder sb1 = new();
-StringBuilder sb2 = new("Test");
+//// var - Implicitly Typed Local Variables
+//var name = "Ruslan Dubas";
+//var myString = new System.Text.StringBuilder();
+//var myFloat = (float)Math.PI;
 
-// same as StringBuilder sb1 = new StringBuilder();
-// same as StringBuilder sb2 = new StringBuilder();
+//// Target-Typed new Expressions
+//StringBuilder sb1 = new();
+//StringBuilder sb2 = new("Test");
 
-MyMethodFoo(new("\ntest"));
-void MyMethodFoo(System.Text.StringBuilder sb)
-{
-    Console.WriteLine(sb);
-}
+//// same as StringBuilder sb1 = new StringBuilder();
+//// same as StringBuilder sb2 = new StringBuilder();
 
-// Expressins and Operators
+//MyMethodFoo(new("\ntest"));
+//void MyMethodFoo(System.Text.StringBuilder sb)
+//{
+//    Console.WriteLine(sb);
+//}
 
-// Null-Coalescing Operator
-string s1 = null;
-string s2 = s1 ?? "nothing"; // s2 evaluates to "nothing"
-Console.WriteLine(s2);
+//// Expressins and Operators
 
-// myVariable ??= someDefault;
-// if (myVariable == null) myVariable = someDefault;
+//// Null-Coalescing Operator
+//string s1 = null;
+//string s2 = s1 ?? "nothing"; // s2 evaluates to "nothing"
+//Console.WriteLine(s2);
 
-// Null-Conditional Operator or "Elvis" operator
-System.Text.StringBuilder sb3 = null;
-string s3 = sb3?.ToString(); // No error, s3 is null
-// same as
-string s4 = (sb3 == null ? null : sb3.ToString());
-Console.WriteLine(s4 = s4 ?? "nothing again");
+//// myVariable ??= someDefault;
+//// if (myVariable == null) myVariable = someDefault;
 
-System.Text.StringBuilder sb5 = null;
-string s5 = sb5?.ToString().ToUpper();  // No error
-Console.WriteLine(s5 = s5 ?? "Nothing again and again!");
+//// Null-Conditional Operator or "Elvis" operator
+//System.Text.StringBuilder sb3 = null;
+//string s3 = sb3?.ToString(); // No error, s3 is null
+//// same as
+//string s4 = (sb3 == null ? null : sb3.ToString());
+//Console.WriteLine(s4 = s4 ?? "nothing again");
 
-//x?.y?.z
+//System.Text.StringBuilder sb5 = null;
+//string s5 = sb5?.ToString().ToUpper();  // No error
+//Console.WriteLine(s5 = s5 ?? "Nothing again and again!");
 
-// same as 
-//x == null ? null : (x.y == null ? null : x.y.z)
+////x?.y?.z
 
-System.Text.StringBuilder sb6 = new StringBuilder();
-var sb7 = sb6?.Append("Do not expect immediate results!");
-Console.WriteLine(sb7);
+//// same as 
+////x == null ? null : (x.y == null ? null : x.y.z)
 
-StringBuilder sb8 = null;
-string result = sb8?.ToString() ?? "Default Value";
-Console.WriteLine(result);
+//System.Text.StringBuilder sb6 = new StringBuilder();
+//var sb7 = sb6?.Append("Do not expect immediate results!");
+//Console.WriteLine(sb7);
 
-int? length = sb7?.ToString().Length;
-Console.WriteLine(length);
+//StringBuilder sb8 = null;
+//string result = sb8?.ToString() ?? "Default Value";
+//Console.WriteLine(result);
 
-MyMonkeyFoo monkeyFive = new MyMonkeyFoo("Retrieve from memory!");
+//int? length = sb7?.ToString().Length;
+//Console.WriteLine(length);
 
-monkeyFive?.PrintValue();
+//MyMonkeyFoo monkeyFive = new MyMonkeyFoo("Retrieve from memory!");
 
-MyMonkeyFoo? monkeySix = null;
+//monkeyFive?.PrintValue();
 
-monkeySix?.PrintValue();
+//MyMonkeyFoo? monkeySix = null;
 
-// Statements
+//monkeySix?.PrintValue();
 
-// Declaration Statements
-bool rich = true, famous = false;
-const double c = 2.99792458E08;
+//// Statements  p.55
 
-// Expression Statements
-string stringOne = "Coding pro-tip: Read, Do, Read, Do, Read, Do!";
+//// Declaration Statements
+//bool rich = true, famous = false;
+//const double c = 2.99792458E08;
 
-// Selection Statements
-if (5 < 2 * 3)
-    Console.WriteLine(stringOne);
+//// Expression Statements
+//string stringOne = "Coding pro-tip: Read, Do, Read, Do, Read, Do!";
 
-// Code block
-var myNumber = 5 > 6 ? 2 * 3 : 3;
-if (myNumber < 3)
-{
-    Console.WriteLine(stringOne);
-    Console.WriteLine(monkeyFive);
-}
+//// Selection Statements
+//if (5 < 2 * 3)
+//    Console.WriteLine(stringOne);
 
-// The else clause
-if (rich == false)
-    Console.WriteLine("Embrace challenges!");
-else
-    if (famous == false)
-    Console.WriteLine("Celebrate small accomplishments!");
+//// Code block
+//var myNumber = 5 > 6 ? 2 * 3 : 3;
+//if (myNumber < 3)
+//{
+//    Console.WriteLine(stringOne);
+//    Console.WriteLine(monkeyFive);
+//}
 
-// Changing the flow of execution
-if (true)
-    if (false)
-        Console.WriteLine(rich);
-    else
-        Console.WriteLine(famous);
+//// The else clause
+//if (rich == false)
+//    Console.WriteLine("Embrace challenges!");
+//else
+//    if (famous == false)
+//    Console.WriteLine("Celebrate small accomplishments!");
 
-// Same as
-if (true)
-{
-    if (false)
-        Console.WriteLine(rich);
-    else
-        Console.WriteLine(famous);
-}
+//// Changing the flow of execution
+//if (true)
+//    if (false)
+//        Console.WriteLine(rich);
+//    else
+//        Console.WriteLine(famous);
 
-// Moving the braces
-if (true)
-{
-    if (false)
-        Console.WriteLine();
-}
-else
-    Console.WriteLine(famous);  // does not execute
+//// Same as
+//if (true)
+//{
+//    if (false)
+//        Console.WriteLine(rich);
+//    else
+//        Console.WriteLine(famous);
+//}
 
-// Else If
-var age = 37;
+//// Moving the braces
+//if (true)
+//{
+//    if (false)
+//        Console.WriteLine();
+//}
+//else
+//    Console.WriteLine(famous);  // does not execute
 
-if (age >= 37)
-    Console.WriteLine("You can be president");
-else if (age >= 21)
-    Console.WriteLine("You can drink!");
-else if (age >= 18)
-    Console.WriteLine("You can vote");
-else
-    Console.WriteLine("You can wait!");
+//// Else If
+//var age = 37;
 
-// The switch statement
-static void ShowCard(int cardNumber)
-{
-    switch (cardNumber)
-    {
-        case 13:
-            Console.WriteLine("King");
-            break;
-        case 12:
-            Console.WriteLine("Queen");
-            break;
-        case 11:
-            Console.WriteLine("Jack");
-            break;
-        default:  // Any other cardNumber
-            Console.WriteLine(cardNumber);
-            break;
-    }
-}
+//if (age >= 37)
+//    Console.WriteLine("You can be president");
+//else if (age >= 21)
+//    Console.WriteLine("You can drink!");
+//else if (age >= 18)
+//    Console.WriteLine("You can vote");
+//else
+//    Console.WriteLine("You can wait!");
 
-var cardNumber = 12;
-ShowCard(cardNumber);
+//// The switch statement p.58
+//static void ShowCard(int cardNumber)
+//{
+//    switch (cardNumber)
+//    {
+//        case 13:
+//            Console.WriteLine("King");
+//            break;
+//        case 12:
+//            Console.WriteLine("Queen");
+//            break;
+//        case 11:
+//            Console.WriteLine("Jack");
+//            break;
+//        default:  // Any other cardNumber
+//            Console.WriteLine(cardNumber);
+//            break;
+//    }
+//}
 
-// One Value
-static void WhichCard(int cardNumber)
-{
+//var cardNumber = 12;
+//ShowCard(cardNumber);
 
-    switch (cardNumber)
-    {
-        case 13:
-        case 12:
-        case 11:
-            Console.WriteLine("Face card");
-            break;
-        default:
-            Console.WriteLine("Plain card");
-            break;
+//// One Value
+//static void WhichCard(int cardNumber)
+//{
 
-    }
-}
+//    switch (cardNumber)
+//    {
+//        case 13:
+//        case 12:
+//        case 11:
+//            Console.WriteLine("Face card");
+//            break;
+//        default:
+//            Console.WriteLine("Plain card");
+//            break;
 
-WhichCard(cardNumber);
+//    }
+//}
 
-// Switching on types
-static void TellMeTheType(object x)
-{
-    switch (x)
-    {
-        case int i:
-            Console.WriteLine("It's an int!");
-            break;
-        case string s:
-            Console.WriteLine(s.Length); // We can use s
-            break;
-        case bool b when b == true:      // Fires when b is true
-            Console.WriteLine("True");
-            break;
-        case null:              // You can also switch on null
-            Console.WriteLine("null");
-            break;
-    }
-}
+//WhichCard(cardNumber);
 
-var myVar = true;
-var myVarTwo = 5;
-int? myVarThree = null;
-var myVarFour = "Reflect on your learnings!";
+//// Switching on types     p.59
+//static void TellMeTheType(object x)
+//{
+//    switch (x)
+//    {
+//        case int i:
+//            Console.WriteLine("It's an int!");
+//            break;
+//        case string s:
+//            Console.WriteLine(s.Length); // We can use s
+//            break;
+//        case bool b when b == true:      // Fires when b is true
+//            Console.WriteLine("True");
+//            break;
+//        case null:              // You can also switch on null
+//            Console.WriteLine("null");
+//            break;
+//    }
+//}
 
-TellMeTheType(myVar);
-TellMeTheType(myVarTwo);
-TellMeTheType(myVarThree);
-TellMeTheType(myVarFour);
+//var myVar = true;
+//var myVarTwo = 5;
+//int? myVarThree = null;
+//var myVarFour = "Reflect on your learnings!";
 
-List<object> myValues = new List<object>();
-myValues.Add(myVar);
-myValues.Add(myVarTwo);
-myValues.Add(myVarThree);
-myValues.Add(myVarFour);
+//TellMeTheType(myVar);
+//TellMeTheType(myVarTwo);
+//TellMeTheType(myVarThree);
+//TellMeTheType(myVarFour);
 
-foreach (var item in myValues)
-{
-    TellMeTheType(item);
-}
+//List<object> myValues = new List<object>();
+//myValues.Add(myVar);
+//myValues.Add(myVarTwo);
+//myValues.Add(myVarThree);
+//myValues.Add(myVarFour);
 
-// Adding values to the list
-List<object> myVars = new List<object> { myVar, myVarTwo, myVarThree, myVarFour };
+//foreach (var item in myValues)
+//{
+//    TellMeTheType(item);
+//}
 
-foreach (var item in myVars)
-    TellMeTheType(item);
+//// Adding values to the list
+//List<object> myVars = new List<object> { myVar, myVarTwo, myVarThree, myVarFour };
+
+//foreach (var item in myVars)
+//    TellMeTheType(item);
+
+//// Switch expressions p.61
+//int cardNumber = 11;
+//string cardName = cardNumber switch
+//{
+//    13 => "King",
+//    12 => "Queen",
+//    11 => "Jack",
+//    _ => "Pip card"
+//};
+
+//Console.WriteLine($"The cardName of cardNumber {cardNumber} is {cardName}");
+
+//int cardNumber = 13; string suite = "spades";
+//string cardName = (cardNumber, suite) switch
+//{
+//    (13, "spades") => "King of spades",
+//    (13, "clubs") => "King of clubs",
+//    _ => "Pip card"
+//};
+
+//Console.WriteLine($"The cardName of cardNumber {cardNumber} and suite {suite} is {cardName}");
 
 
+//// Iteration Statements p.61
 
+//// while 
+//int i = 0;
+//while (i < 3)
+//    Console.WriteLine(i++);
 
+//// do-while
+//int j = 0;
+//do
+//{
+//    Console.WriteLine(j++);
+//}
+//while (j < 3);
 
+//// for loop
+//for (int k = 0; k < 3; k++)
+//    Console.WriteLine(k);
 
+//// first 10 Fibonacci numbers p.62
+//for (int z = 0, prevFib = 1, curFib = 1; z < 10; z++)
+//{
+//    Console.WriteLine(prevFib);
+//    int newFib = prevFib + curFib;
+//    prevFib = curFib; curFib = newFib;
+//}
 
+//// foreach loop           p.63
+//foreach (var item in "Ruslan")
+//    Console.Write(item +" ");
 
+//List<object> list = new List<object> { "Rus", "Ruslan", "Roman" };
 
+//foreach (var item in list)
+//    Console.WriteLine(item+", ");
 
-
-
-
-
+//Console.WriteLine(string.Join(", ",list));
 
 
 
