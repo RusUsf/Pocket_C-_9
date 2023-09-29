@@ -665,9 +665,82 @@
 
 //Console.WriteLine(string.Join(", ",list));
 
+//// p.64 Continue Statement
+//for (int i = 0; i < 10; i++)
+//{
+//    if ((i % 2) == 0) continue;
+//    Console.Write(i+" ");
+//}
 
+//// p.64 goto statement
+//int j = 1;
+//startLoop:
+//if (j <= 5)
+//{
+//    Console.Write(j + " ");
+//    j++;
+//    goto startLoop;
+//}
 
+////p.64 return statement
+//decimal d1 = 0.5m;
 
+//Console.WriteLine(AsPercentage(d1));
+//static decimal AsPercentage(decimal d)
+//{
+//    decimal p = d * 100m;
+//    return p;
+//}
+
+////p.65 Namespaces
+//using Outer.Middle.Inner;
+//Class1 c;
+//Outer.Middle.Inner.Innermost.Class1 c1;
+
+//namespace Outer
+//{
+//    namespace Middle
+//    {
+//        namespace Inner
+//        {
+//            class Class1 { }
+//            class Class2 { }
+//        }
+//    }
+//}
+
+//namespace Outer.Middle.Inner.Innermost
+//{
+//    class Class1 { }
+//    class Class2 { }
+//}
+
+////p.66 using static
+//using static System.Console;
+//WriteLine("Coding Pro-Tip: Read, Do, Read, Do, Read, Do!");
+
+////p.67 Name scoping
+//namespace Outer
+//{
+//    class Class1 { }
+//    namespace Inner
+//    {
+//        class Class2 : Class1 { }
+//    }
+//}
+
+//namespace MyTradingCompany
+//{
+//    namespace Common
+//    {
+//        class ReportBase { }
+//    }
+
+//    namespace ManagemetnReporting
+//    {
+//        class SalesReport : Common.ReportBase { }
+//    }
+//}
 
 
 
