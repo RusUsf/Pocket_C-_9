@@ -742,10 +742,37 @@
 //    }
 //}
 
+//// p.69 Classes
+
+//Octopus octOne = new Octopus(age:37,name:"Rus",message:"Retrieve from memory!");
+//Octopus.Greetings("Coding Pro-Tip: Read, Do, Read, Do, Read, Do!");
+//Console.WriteLine($"The properties for the octOne are - name:{octOne.Name}, age: {octOne.Age}, message: {octOne.Message}");
+
+//class Octopus
+//{
+//    //Fields:
+//    public string Name;
+//    public int Age = 10;
+//    static readonly int Legs = 8, Eys = 2;
+//    public string Message = "Hello World, I am Octopus!";
+//    const double twoPI = 2 * System.Math.PI;
+//    public Octopus(int age = 0, string message = "", string name = "")
+//    {
+//        this.Name = name;
+//        this.Age = age;
+//        this.Message = message;
+//    }
+
+//    //Methods:
+//    int Foo(int x) { return x * 2; }
+//    int FooFoo(int x) => x * 2;
+//    void FooBar(int x) => Console.WriteLine(x);
+//    public static void Greetings(string greeting = "Welcome World!") => Console.WriteLine(greeting);
+
+//}
 
 
-
-
+//p.72 Overloading methods
 
 
 
